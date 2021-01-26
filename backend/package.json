@@ -1,0 +1,19 @@
+{
+  "name": "curate-backend",
+  "version": "0.0.1",
+  "description": "Spotify API backend consumer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Gonzalez & Derrek Gass",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "querystring": "^0.2.0"
+  }
+}

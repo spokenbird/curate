@@ -1,0 +1,47 @@
+.app {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(52,58,64);
+  background: linear-gradient(180deg, rgba(52,58,64,1) 0%, rgba(28,60,65,1) 100%);
+}
+
+.primary {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.secondary {
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.token {
+  transition: 0.1s;
+}
+
+.token:active {
+  transform: scale(0.95);
+}
+
+.token span {
+  color: #56bac9;
+  border: 1px solid #7782;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 24px;
+  transition: 0.5s;
+}
+
+.token span:hover {
+  cursor: pointer;
+  background: #44636a;
+}
+
+.highlight {
+  color: #56bac9;
+}
+
+.far {
+  color: #fff;
+}
