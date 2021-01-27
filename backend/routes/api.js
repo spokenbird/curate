@@ -40,7 +40,7 @@ router.get('/search', cors(), async function(req, res, next) {
         let searchRes = await axios('https://api.spotify.com/v1/search?q=Spoken+Bird&type=artist', {
             headers: {
                 'Accept': 'application/json',
-                'Authorization': 'Bearer PLACEHOLDER',
+                'Authorization': `Bearer ${req.token}`,
                 'Content-Type': 'application/json'
             }
         });
