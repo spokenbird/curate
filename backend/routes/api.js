@@ -6,6 +6,7 @@ const cors = require('cors');
 const axios = require('axios');
 const querystring = require('querystring');
 const { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } = require('../config');
+const SPOTIFY_BASE_URL = 'https://api.spotify.com/v1';
 
 
 router.get('/token', cors(), async function (req, res, next) {
@@ -25,8 +26,27 @@ router.get('/token', cors(), async function (req, res, next) {
         });
 
         let token = tokenReq.data;
+        console.log(SPOTIFY_BASE_URL);
         console.log("Success! Your token is: ", token);
         return res.json(token);
+    }
+    catch (err) {
+        return next(err);
+    }
+});
+
+router.get('/search', cors(), async function(req, res, next) {
+    try {
+        let searchRes = await axios('https://api.spotify.com/v1/search?q=Spoken+Bird&type=artist', {
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': 'Bearer PLACEHOLDER',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log(searchRes.data.artists.items);
+        return res.json(searchRes.data);
     }
     catch (err) {
         return next(err);
