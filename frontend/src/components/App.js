@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import './App.css';
+import Search from "./Search";
 
 const BASE_URL = 'http://localhost:3001';
 
@@ -52,6 +53,7 @@ class App extends Component {
                 {this.state.token} <i className="far fa-copy ml-2"></i>
               </span>
             </p>
+            <Search token={this.state.token} />
           </div>
         </div>
     );
