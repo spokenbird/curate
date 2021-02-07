@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const SPOTIFY_SEARCH_URL = "https://api.spotify.com/v1/search";
-const BACKEND_API_URL = 'http://localhost:3001';
 
 class SpotifyAPI {
     static async requestSearch(searchParams, token) {
@@ -14,7 +13,6 @@ class SpotifyAPI {
                 }
             });
 
-            console.log(searchRes.data);
             return searchRes.data;
         }
         catch (err) {
